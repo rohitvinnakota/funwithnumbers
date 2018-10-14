@@ -8,12 +8,15 @@ public class Game : MonoBehaviour
 	Boundary boundaryPrefab = null;
 
 	[SerializeField]
-	Panel panelPrefab = null; 
+	Panel panelPrefab = null;
+
+	[SerializeField]
+	Vector3 position = Vector3.zero; 
 
 	// Use this for initialization
 	void Start () 
 	{
-		
+		Instantiate(boundaryPrefab, position, Quaternion.identity);
 	}
 	
 	// Update is called once per frame
